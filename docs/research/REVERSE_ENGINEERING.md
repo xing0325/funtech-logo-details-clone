@@ -44,3 +44,10 @@
 - Native scroll container with mandatory snap, hidden scrollbar, overscroll containment.
 - Active card is centered with smooth `scrollIntoView`.
 - A route push occurs only after the target thumbnail opacity transition completes.
+
+## Full route deck
+- The live Next Flight records were decoded for all 14 routes and the matching route chunks were inventoried.
+- WebGL targets map to manga A on Home/Fin, B on Brand Message/Ending, C on CI Update, and D on FunTech Way/Logo Details.
+- Theme sequence and exact accents were recovered as Volt `#dffe38`, Breaker `#ff2929`, and Fun `#ff481b`.
+- Logo Variation card transforms, the 10th Item scatter layout, the We Are FunTech 15-member order, Fin card assets, animated noise illustrations, and Vimeo sources were recovered from route data rather than estimated from screenshots.
+- 157 original site assets are mirrored in `public/assets/full-site/`; the reproducible fetch/derivative script is `scripts/download-full-site-assets.mjs`.

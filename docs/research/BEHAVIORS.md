@@ -11,3 +11,6 @@
 - Links and controls brighten on hover with a 300ms cubic-bezier(0.25,1,0.5,1) transition.
 - The route's manga canvas uses the original four-frame `manga-d-sprite` at 4 FPS; the clone runs the same source atlas as a live CSS flipbook.
 - The original foreground lightning is instanced Three.js geometry. The clone keeps it as a live animated SVG foreground layer using the recovered colors and stacking order.
+- All 14 scenes are built and statically exported at their original routes. Navigation calls `history.pushState`, updates the active rail thumbnail, and preserves back/forward behavior.
+- Logo Variation cards use the recovered position and rotation data; the 10th Item scene uses the recovered scatter coordinates; We Are FunTech runs the recovered 5x3 member grid and image pairs.
+- Vision and Way films are live muted looping videos. Vision also has a local poster derived from the source thumbnail so a failed remote stream never leaves an empty panel.

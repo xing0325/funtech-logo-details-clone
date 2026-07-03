@@ -14,8 +14,10 @@
 - The opening overlay is independently viewport-fixed, so ON/OFF remains reachable at 390px before returning to the fixed-stage crop.
 - The loader, sound gate, main entered state, menu grid, theme controls and card state controls are real interactive elements.
 - Wheel input runs the recovered threshold/accumulation/cooldown algorithm.
-- Final references: `clone-reverse-final-visual.png`, `clone-reverse-mobile-fixed.png`, and `clone-reverse-mobile-entered.png`.
+- All 14 exported routes were opened and captured at 1440x1000. The review sheet is `docs/design-references/full-deck-contact-sheet.png`; individual captures are under `docs/design-references/full-deck/`.
+- Wheel navigation was exercised from Logo Details to Logo Variation and verified by the resulting `/logo-variation/` URL, updated rail state, and bottom navigation.
+- Final references: `full-deck-contact-sheet.png`, `clone-reverse-mobile-fixed.png`, and `clone-reverse-mobile-entered.png`.
 
 ## Known limitation
 - The foreground lightning uses an animated SVG surrogate over the original visual stack instead of executing the site's Three.js instanced OBJ shader.
-- Only the requested Logo Details route is cloned, so accepted wheel navigation displays the recovered transition treatment instead of routing to unbuilt neighboring pages.
+- The live route videos remain remote Vimeo streams. A local Vision poster covers slow or unavailable playback.
