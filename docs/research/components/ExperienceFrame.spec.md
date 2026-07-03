@@ -6,7 +6,7 @@
 - **Interaction model:** click-driven controls over a fixed viewport canvas
 
 ## DOM Structure
-Viewport root > fixed 1440x1000 visual stage > transparent navigation hotspots > theme controls > menu overlay.
+Viewport root > loader and sound gate > fixed 1440x1000 visual stage > real sidebar, three detail cards, theme controls, bottom navigation, and menu overlay.
 
 ## Computed Styles
 - Body: width 100%, height 100%, overflow hidden, background rgb(28,29,30).
@@ -18,14 +18,16 @@ Viewport root > fixed 1440x1000 visual stage > transparent navigation hotspots >
 - Global transition: 0.3s cubic-bezier(0.25,1,0.5,1).
 
 ## States & Behaviors
-- Menu opens from the bottom-center button and displays the captured four-column thumbnail grid over the full stage.
+- Loading counter and SVG lightning run first, followed by the ON/OFF sound gate.
+- Wheel input changes the active Logo Detail card with a throttled state transition.
+- Menu opens from the bottom-center button and displays a real four-column thumbnail grid over the full stage.
 - Theme buttons update selected state and apply a restrained hue treatment.
 - Prev/next/PDF/sidebar items are real anchors.
 - Mobile/tablet retain the fixed 1440px stage and crop horizontally.
 
 ## Assets
-- Settled composite: `public/reference/logo-details-desktop.png`.
-- Menu composite: `public/reference/logo-details-menu.png`.
+- Chapter thumbnails: `public/assets/thumbnails/*.webp`.
+- The page itself is rendered from DOM, CSS, and SVG; captured composites are not used as the visual base.
 - Mobile reference: `public/reference/logo-details-mobile.png`.
 - Thumbnail files: `public/assets/thumbnails/*.webp`.
 
