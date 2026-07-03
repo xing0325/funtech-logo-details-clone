@@ -1,2 +1,3 @@
-:HL["/funtech-logo-details-clone/_next/static/chunks/1_5j55bh6tzzx.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"ScOHILxIDHgorc4dMTtp5"}
+:HL["/funtech-logo-details-clone/_next/static/chunks/0gvb3j3uq7iik.css","style"]
+:HL["https://use.typekit.net/pfl7wcw.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"55VFGsX2NKMgjpHtsOsGy"}
