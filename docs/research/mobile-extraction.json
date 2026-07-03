@@ -1,0 +1,1310 @@
+{
+  "blocks": [
+    {
+      "cls": "h-full w-full p-2",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 844,
+        "w": 375,
+        "x": 0,
+        "y": 0
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative h-full flex flex-col relative",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 828,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "flex min-h-0 flex-1 flex-col opacity-100 transition-base",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 772,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative min-h-0 flex-1",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative flex h-full min-h-0 w-full items-center justify-center @container-[size] ",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "absolute inset-0",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "pointer-events-none absolute inset-0 isolate overflow-hidden bg-background @container-[size]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "absolute inset-0 overflow-hidden font-key flex flex-col items-center justify-center gap-0 [--title-loop-rows:6]",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": -45.89829635620117
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": -45.89829635620117
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": -45.89829635620117
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": -45.89829635620117
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.382568359375,
+        "x": -38.55352783203125,
+        "y": -980.0236206054688
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -38.55352783203125,
+        "y": -456.6834716796875
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 62.74232864379883
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 62.74232864379883
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 62.74232864379883
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 62.74232864379883
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.3828125,
+        "x": -1983.7689208984375,
+        "y": -350.16412353515625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -30.63675308227539,
+        "y": -350.16412353515625
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 171.38294982910156
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 171.38294982910156
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 171.38294982910156
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.4372100830078,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 171.38294982910156
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.382568359375,
+        "x": -38.55352783203125,
+        "y": -762.7423706054688
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -38.55352783203125,
+        "y": -239.40220642089844
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43719482421875,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 280.0235900878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43719482421875,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 280.0235900878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43719482421875,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 280.0235900878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43719482421875,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 280.0235900878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.3828125,
+        "x": -1983.7689208984375,
+        "y": -132.88287353515625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -30.63675308227539,
+        "y": -132.88287353515625
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 388.6642150878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 388.6642150878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 388.6642150878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 388.6642150878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.382568359375,
+        "x": -38.55352783203125,
+        "y": -545.4611206054688
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -38.55352783203125,
+        "y": -22.12095832824707
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "w-[120%] -rotate-15",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 497.3048400878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 497.3048400878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 497.3048400878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 216.43722534179688,
+        "w": 444.236083984375,
+        "x": -34.610233306884766,
+        "y": 497.3048400878906
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 1151.619140625,
+        "w": 3934.3828125,
+        "x": -1983.7689208984375,
+        "y": 84.39837646484375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "text-[clamp(96px,max(22cqw,calc(100cqh/var(--title-loop-rows))),360px)] leading-none font-black whitespace-nowrap text-key opacity-[0.05] transition-colors transition-base",
+      "display": "block",
+      "fontSize": "108.641px",
+      "r": {
+        "h": 628.2789916992188,
+        "w": 1981.25048828125,
+        "x": -30.63675308227539,
+        "y": 84.39837646484375
+      },
+      "tag": "SPAN",
+      "text": "LOGODETAILSLOGODETAILS"
+    },
+    {
+      "cls": "absolute inset-0 bg-[repeating-linear-gradient(-135deg,rgba(255,255,255,.02)_0,rgba(255,255,255,.02)_1px,transparent_1px,transparent_5px)]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_38%,rgba(28,29,30,0.44)_76%,rgba(28,29,30,1)_100%)]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 651.84375,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "@container-[size] relative w-[min(100cqw,calc(100cqh*16/9))] aspect-video scale-100 transition-base",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "h-full w-full relative",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative h-full w-full overflow-hidden bg-background",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden bg-background text-key",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "CANVAS",
+      "text": ""
+    },
+    {
+      "cls": "pointer-events-none absolute inset-0 z-30 h-full w-full overflow-hidden",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "CANVAS",
+      "text": ""
+    },
+    {
+      "cls": "relative z-10 h-full w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative w-full h-full text-foreground",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 201.9375,
+        "w": 359,
+        "x": 8,
+        "y": 232.953125
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "absolute z-0 w-[30cqw] top-[9cqw] right-0 left-0 m-auto flex flex-col gap-[1cqw]",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 150.796875,
+        "w": 107.6875,
+        "x": 133.65625,
+        "y": 281.0946044921875
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "w-full aspect-square bg-background relative",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 133.65625,
+        "y": 281.0946044921875
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative size-full overflow-hidden bg-background",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 133.65625,
+        "y": 281.0946044921875
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "logo-detail-svg-key-transition absolute inset-0 size-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 133.65625,
+        "y": 281.0946044921875
+      },
+      "tag": "svg",
+      "text": ""
+    },
+    {
+      "cls": "absolute z-0 w-[30cqw] top-[14cqw] right-auto left-[2cqw] m-auto flex flex-col gap-[1cqw]",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 142.890625,
+        "w": 107.6875,
+        "x": 15.171875,
+        "y": 298.5229187011719
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "w-full aspect-square bg-background relative",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 15.171875,
+        "y": 298.5229187011719
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative size-full overflow-hidden bg-background",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 15.171875,
+        "y": 298.5229187011719
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "logo-detail-svg-key-transition absolute inset-0 size-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 15.171875,
+        "y": 298.5229187011719
+      },
+      "tag": "svg",
+      "text": ""
+    },
+    {
+      "cls": "absolute z-0 w-[30cqw] top-[2cqw] right-[2cqw] left-auto m-auto flex flex-col gap-[1cqw]",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 142.890625,
+        "w": 107.6875,
+        "x": 252.140625,
+        "y": 256.11041259765625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "w-full aspect-square bg-background relative",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 252.140625,
+        "y": 256.11041259765625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative size-full overflow-hidden bg-background",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 252.140625,
+        "y": 256.11041259765625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "logo-detail-svg-key-transition absolute inset-0 size-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 107.6875,
+        "w": 107.6875,
+        "x": 252.140625,
+        "y": 256.11041259765625
+      },
+      "tag": "svg",
+      "text": ""
+    },
+    {
+      "cls": "",
+      "display": "inline",
+      "fontSize": "16px",
+      "r": {
+        "h": 151.80596923828125,
+        "w": 139.22677612304688,
+        "x": 239.35440063476562,
+        "y": 238.70050048828125
+      },
+      "tag": "g",
+      "text": ""
+    },
+    {
+      "cls": "h-[calc(38cqw*9/16+40px)] shrink-0 relative",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 120.15625,
+        "w": 359,
+        "x": 8,
+        "y": 659.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "flex h-full min-h-0 w-full flex-col @container",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 120.15625,
+        "w": 359,
+        "x": 8,
+        "y": 659.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative h-full flex-1",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 120.15625,
+        "w": 359,
+        "x": 8,
+        "y": 659.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "h-full min-h-0 snap-x snap-mandatory overflow-x-auto overscroll-x-none scrollbar-none px-[20px] pt-4 pb-6",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 120.15625,
+        "w": 359,
+        "x": 8,
+        "y": 659.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "flex h-full items-center gap-[2cqw]",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 80.15625,
+        "w": 319,
+        "x": 28,
+        "y": 675.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "h-full shrink-0 snap-none",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 80.15625,
+        "w": 111,
+        "x": 28,
+        "y": 675.84375
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative min-h-0 shrink-0 scroll-m-0 snap-center snap-always w-[38cqw] min-w-[120px]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "A",
+      "text": ""
+    },
+    {
+      "cls": "group block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "SPAN",
+      "text": ""
+    },
+    {
+      "cls": "block w-full origin-center transform-gpu transition transition-base group-hover:scale-95 flex min-w-0 flex-col gap-1",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "SPAN",
+      "text": ""
+    },
+    {
+      "cls": "aspect-video w-full shrink-0 overflow-hidden transition-colors transition-base bg-key",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "size-full object-cover",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "IMG",
+      "text": ""
+    },
+    {
+      "cls": "pointer-events-none absolute inset-x-0 top-0 flex aspect-video items-center justify-center rounded-sm",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 146.171875,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "relative min-h-0 shrink-0 scroll-m-0 snap-center snap-always w-[38cqw] min-w-[120px]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "A",
+      "text": ""
+    },
+    {
+      "cls": "group block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "SPAN",
+      "text": ""
+    },
+    {
+      "cls": "block w-full origin-center transform-gpu transition transition-base group-hover:scale-95 flex min-w-0 flex-col gap-1",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 92.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "SPAN",
+      "text": ""
+    },
+    {
+      "cls": "aspect-video w-full shrink-0 overflow-hidden transition-colors transition-base bg-key",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "size-full object-cover",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "IMG",
+      "text": ""
+    },
+    {
+      "cls": "pointer-events-none absolute inset-x-0 top-0 flex aspect-video items-center justify-center rounded-sm",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 76.71875,
+        "w": 136.40625,
+        "x": 289.75,
+        "y": 669.5625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "absolute bottom-0 w-full z-11 flex h-full min-h-0 w-full flex-col overflow-hidden px-[6px] pt-2 pb-14 transition-opacity transition-base opacity-0 pointer-events-none",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 828,
+        "w": 359,
+        "x": 8,
+        "y": 8
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "@container-[size] relative min-h-0 flex-1",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 764,
+        "w": 347,
+        "x": 14,
+        "y": 16
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "h-full min-h-0 overflow-y-auto overscroll-y-none scrollbar-none pl-[12px] pr-[6px]",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 764,
+        "w": 347,
+        "x": 14,
+        "y": 16
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "grid w-full gap-3 py-6 transition-transform transition-base origin-bottom scale-96",
+      "display": "grid",
+      "fontSize": "16px",
+      "r": {
+        "h": 951.2099609375,
+        "w": 315.8399658203125,
+        "x": 32.58000183105469,
+        "y": 55.6337890625
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "min-w-0 w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 119.43000030517578,
+        "w": 152.16000366210938,
+        "x": 32.58000183105469,
+        "y": 78.67378997802734
+      },
+      "tag": "DIV",
+      "text": ""
+    },
+    {
+      "cls": "block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 119.43000030517578,
+        "w": 152.16000366210938,
+        "x": 32.58000183105469,
+        "y": 78.67378997802734
+      },
+      "tag": "A",
+      "text": ""
+    },
+    {
+      "cls": "group block w-full",
+      "display": "block",
+      "fontSize": "16px",
+      "r": {
+        "h": 119.43000030517578,
+        "w": 152.16000366210938,
+        "x": 32.58000183105469,
+        "y": 78.67378997802734
+      },
+      "tag": "SPAN",
+      "text": ""
+    },
+    {
+      "cls": "block w-full origin-center transform-gpu transition transition-base group-hover:scale-95 flex min-w-0 flex-col rounded bg-foreground/10 text-foreground group-hover:bg-key group-hover:text-background px-1.5 pt-1.5 pb-3 ga",
+      "display": "flex",
+      "fontSize": "16px",
+      "r": {
+        "h": 119.43000030517578,
+        "w": 152.16000366210938,
+        "x": 32.58000183105469,
+        "y": 78.67378997802734
+      },
+      "tag": "SPAN",
+      "text": ""
+    }
+  ],
+  "dims": {
+    "h": 844,
+    "sh": 844,
+    "sw": 375,
+    "w": 390
+  }
+}
