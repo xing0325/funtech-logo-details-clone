@@ -3,7 +3,7 @@
 ## Overview
 - **Target file:** `src/components/ExperienceFrame.tsx`
 - **Screenshot:** `docs/design-references/original-desktop-1440.png`
-- **Interaction model:** click-driven controls over a fixed viewport canvas
+- **Interaction model:** time-driven opening and canvas layers, route-style wheel navigation, click-driven controls over a fixed viewport canvas
 
 ## DOM Structure
 Viewport root > loader and sound gate > fixed 1440x1000 visual stage > real sidebar, three detail cards, theme controls, bottom navigation, and menu overlay.
@@ -18,8 +18,8 @@ Viewport root > loader and sound gate > fixed 1440x1000 visual stage > real side
 - Global transition: 0.3s cubic-bezier(0.25,1,0.5,1).
 
 ## States & Behaviors
-- Loading counter and SVG lightning run first, followed by the ON/OFF sound gate.
-- Wheel input changes the active Logo Detail card with a throttled state transition.
+- Loading counter, the original eight-frame logo atlas, lightning texture and audio cues run first, followed by the ON/OFF sound gate.
+- Wheel input uses the recovered 180-delta threshold, 220ms accumulation window, and 800ms cooldown. The live site then changes route.
 - Menu opens from the bottom-center button and displays a real four-column thumbnail grid over the full stage.
 - Theme buttons update selected state and apply a restrained hue treatment.
 - Prev/next/PDF/sidebar items are real anchors.
@@ -27,7 +27,10 @@ Viewport root > loader and sound gate > fixed 1440x1000 visual stage > real side
 
 ## Assets
 - Chapter thumbnails: `public/assets/thumbnails/*.webp`.
-- The page itself is rendered from DOM, CSS, and SVG; captured composites are not used as the visual base.
+- Losslessly extracted detail vectors: `public/assets/logo-details/detail-01.svg`, `detail-02.svg`, `detail-03.svg`.
+- WebGL-derived source artwork: `public/assets/webgl/manga-d-sprite.jpg` and its transparency-preserving local derivative.
+- Original noise-border sprites, opening atlas, lightning texture, OBJ geometry, GIF, BGM, and lightning cue are stored under `public/assets/`.
+- The page itself is rendered from DOM, CSS, SVG, and source atlases; captured composites are not used as the visual base.
 - Mobile reference: `public/reference/logo-details-mobile.png`.
 - Thumbnail files: `public/assets/thumbnails/*.webp`.
 

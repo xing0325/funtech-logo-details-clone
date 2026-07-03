@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type Theme = "volt" | "victory" | "fun";
-type IntroState = "loading" | "sound" | "entered";
+type IntroState = "loading" | "sound" | "opening" | "entered";
 
 const chapters = [
   ["01", "HOME", "home"], ["02", "BRAND MESSAGE", "brand-message"],
@@ -20,17 +20,17 @@ const details = [
   {
     code: "DETAILS_01", title: <>Play Technology<br />All In</>,
     body: <>Boyish in impulse, street in style. A playful,<br />boundary-breaking spirit in a cartoon-inspired look<br />with charm and a hint of edge. Unbound by<br />convention, it goes all in on playing with creativity.</>,
-    art: "play",
+    art: "detail-01",
   },
   {
     code: "DETAILS_02", title: <>Star Creators</>,
     body: <>We are a collective of star creators who shine with<br />originality.<br />The stars woven into the “U” and “C” continue to<br />illuminate the kind of organization FunTech strives to<br />be.</>,
-    art: "star",
+    art: "detail-02",
   },
   {
     code: "DETAILS_03", title: <>Ever-Evolving</>,
     body: <>Its ever-shifting form is a style built to play boldly<br />through an unpredictable era.<br />No matter how technology or the environment<br />changes, we ride those waves with a sense of play.</>,
-    art: "evolve",
+    art: "detail-03",
   },
 ] as const;
 
@@ -38,51 +38,110 @@ function NoiseBorder() {
   return <><i className="edge edge-t" /><i className="edge edge-r" /><i className="edge edge-b" /><i className="edge edge-l" /></>;
 }
 
-function DetailArt({ type }: { type: string }) {
-  if (type === "star") return <div className="art art-star"><span /><span /><span /><span className="spark">✦</span></div>;
-  if (type === "evolve") return <div className="art art-evolve"><b /><b /><b /><b /><i>✦</i></div>;
-  return <div className="art art-play"><span className="flame">●</span><span className="shoe">Fun-kun<br />Shoes!</span><span className="fire">Fun-kun<br />Fire!</span></div>;
-}
-
 export default function ExperienceFrame() {
   const [intro, setIntro] = useState<IntroState>("loading");
   const [progress, setProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>("volt");
-  const [activeDetail, setActiveDetail] = useState(0);
-  const lastWheel = useRef(0);
+  const [openingFrame, setOpeningFrame] = useState(0);
+  const [transitionDirection, setTransitionDirection] = useState<"prev" | "next" | null>(null);
+  const wheelState = useRef({ accumulatedDeltaY: 0, direction: null as "prev" | "next" | null, lastNavigationAt: null as number | null, lastWheelAt: null as number | null });
+  const railRef = useRef<HTMLDivElement>(null);
+  const bgmRef = useRef<HTMLAudioElement>(null);
+  const lightningAudioRef = useRef<HTMLAudioElement>(null);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   useEffect(() => {
     if (intro !== "loading") return;
     const started = Date.now();
     const timer = window.setInterval(() => {
-      const value = Math.min(100, Math.round((Date.now() - started) / 22));
+      const value = Math.min(100, Math.round((Date.now() - started) / 8));
       setProgress(value);
       if (value === 100) {
         window.clearInterval(timer);
-        window.setTimeout(() => setIntro("sound"), 450);
+        window.setTimeout(() => setIntro("sound"), 200);
       }
-    }, 22);
+    }, 25);
     return () => window.clearInterval(timer);
   }, [intro]);
 
+  useEffect(() => {
+    if (intro !== "opening") return;
+    const started = performance.now();
+    let animationFrame = 0;
+    const tick = (now: number) => {
+      const elapsed = Math.max(0, (now - started) / 1000);
+      const ramp = 2.4;
+      const initialFps = 1.25;
+      const peakFps = 36;
+      const integral = elapsed <= ramp
+        ? initialFps * elapsed + (peakFps - initialFps) * ramp * ((elapsed / ramp) ** 4 / 4)
+        : initialFps * ramp + (peakFps - initialFps) * ramp * 0.25 + peakFps * (elapsed - ramp);
+      setOpeningFrame(Math.floor(integral) % 8);
+      if (elapsed < 3.4) animationFrame = window.requestAnimationFrame(tick);
+      else setIntro("entered");
+    };
+    animationFrame = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [intro]);
+
+  useEffect(() => {
+    if (intro !== "entered") return;
+    const frame = window.requestAnimationFrame(() => {
+      railRef.current?.querySelector(".current")?.scrollIntoView({ block: "center", behavior: "smooth" });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [intro]);
+
   function handleWheel(event: React.WheelEvent) {
-    if (intro !== "entered" || menuOpen || Math.abs(event.deltaY) < 10) return;
-    const now = Date.now();
-    if (now - lastWheel.current < 420) return;
-    lastWheel.current = now;
-    setActiveDetail((current) => Math.max(0, Math.min(2, current + (event.deltaY > 0 ? 1 : -1))));
+    if (intro !== "entered" || menuOpen) return;
+    const now = performance.now();
+    const normalized = event.deltaMode === 1 ? event.deltaY * 40 : event.deltaMode === 2 ? event.deltaY * Math.max(1, window.innerHeight) : event.deltaY;
+    if (Math.abs(normalized) < 4) return;
+    const state = wheelState.current;
+    if (state.lastNavigationAt !== null && (now - state.lastNavigationAt < 800 || (state.lastWheelAt !== null && now - state.lastWheelAt <= 220))) {
+      wheelState.current = { ...state, accumulatedDeltaY: 0, direction: null, lastWheelAt: now };
+      return;
+    }
+    const direction = normalized > 0 ? "next" : "prev";
+    const accumulated = state.lastWheelAt === null || now - state.lastWheelAt > 220 || (state.direction !== null && state.direction !== direction)
+      ? normalized
+      : state.accumulatedDeltaY + normalized;
+    if (Math.abs(accumulated) >= 180) {
+      wheelState.current = { accumulatedDeltaY: 0, direction: null, lastNavigationAt: now, lastWheelAt: now };
+      setTransitionDirection(direction);
+      window.setTimeout(() => setTransitionDirection(null), 800);
+    } else {
+      wheelState.current = { ...state, accumulatedDeltaY: accumulated, direction, lastNavigationAt: null, lastWheelAt: now };
+    }
+  }
+
+  function enterWithSound(enabled: boolean) {
+    if (enabled) {
+      if (bgmRef.current) {
+        bgmRef.current.currentTime = 16.5;
+        bgmRef.current.volume = 0.2;
+        void bgmRef.current.play().catch(() => {});
+      }
+      if (lightningAudioRef.current) {
+        lightningAudioRef.current.currentTime = 0;
+        lightningAudioRef.current.volume = 0.55;
+        void lightningAudioRef.current.play().catch(() => {});
+      }
+    }
+    setIntro("opening");
   }
 
   return (
     <main className="viewport" data-theme={theme} onWheel={handleWheel}>
+      <audio ref={bgmRef} src={`${basePath}/assets/opening/sound/bgm.mp3`} preload="auto" loop />
+      <audio ref={lightningAudioRef} src={`${basePath}/assets/opening/sound/lightning.aac`} preload="auto" />
       <div className={`stage ${intro === "entered" ? "is-entered" : ""}`}>
         <div className="ambient"><span>LOGODETAILS</span><span>LOGODETAILS</span><span>LOGODETAILS</span><span>LOGODETAILS</span></div>
 
         <aside className="rail" aria-label="Chapter navigation">
           <NoiseBorder />
-          <div className="rail-scroll">
+          <div className="rail-scroll" ref={railRef}>
             {chapters.map(([number, label, slug]) => (
               <a className={number === "09" ? "current" : ""} href={`#${slug}`} key={number}>
                 <Image src={`${basePath}/assets/thumbnails/${slug}.webp`} alt="" width={1024} height={576} unoptimized />
@@ -94,27 +153,40 @@ export default function ExperienceFrame() {
 
         <section className="workspace">
           <NoiseBorder />
+          <div className="title-loop" aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <span key={index}>LOGODETAILSLOGODETAILS</span>)}</div>
+          <div className="content-fx" aria-hidden="true">
+            <div className="manga-frame" />
+          </div>
+          <svg className="main-lightning" viewBox="0 0 1209 680" preserveAspectRatio="none" aria-hidden="true">
+            <g className="bolt bolt-a"><path className="bolt-shadow" d="M-30 185C62 155 105 270 185 280S287 180 385 232 470 302 545 254" /><path className="bolt-core" d="M-30 185C62 155 105 270 185 280S287 180 385 232 470 302 545 254" /></g>
+            <g className="bolt bolt-b"><path className="bolt-shadow" d="M842 294C920 340 977 342 1032 374S1134 350 1240 294" /><path className="bolt-core" d="M842 294C920 340 977 342 1032 374S1134 350 1240 294" /></g>
+          </svg>
+          <span className="section-label">09. LOGO DETAILS ▣</span>
           <header className="work-head">
-            <span>09. LOGO DETAILS ▣</span>
             <h1>Logo Details</h1>
           </header>
-          <div className="scribble scribble-a" /><div className="scribble scribble-b" />
-          <div className="cards" style={{ "--active": activeDetail } as React.CSSProperties}>
+          <Image className="sticker-gif" src={`${basePath}/assets/logo-details/zyan.gif`} alt="" width={990} height={1080} unoptimized />
+          <div className="cards">
             {details.map((detail, index) => (
-              <article className={`detail-card card-${index + 1} ${activeDetail === index ? "active" : ""}`} key={detail.code}>
-                <DetailArt type={detail.art} />
-                <div className="detail-copy">
+              <article className={`detail-card card-${index + 1}`} key={detail.code}>
+                <div className="art">
+                  <NoiseBorder />
+                  <Image src={`${basePath}/assets/logo-details/${detail.art}.svg`} alt="" width={380} height={380} unoptimized />
+                  <div className="detail-title">
                   <small>{detail.code}</small>
                   <h2>{detail.title}</h2>
-                  <p>{detail.body}</p>
+                  </div>
                 </div>
+                <p>{detail.body}</p>
               </article>
             ))}
           </div>
-          <div className="scroll-meter" aria-label={`Detail ${activeDetail + 1} of 3`}>
-            {[0, 1, 2].map((item) => <button key={item} aria-label={`Show detail ${item + 1}`} className={activeDetail === item ? "active" : ""} onClick={() => setActiveDetail(item)} />)}
-          </div>
         </section>
+
+        <div className={`route-transition ${transitionDirection ?? ""}`} aria-hidden={!transitionDirection}>
+          <span>{transitionDirection === "next" ? "10. LOGO VARIATION" : "08. ALL FOR FUN"}</span>
+          <svg viewBox="0 0 900 500"><path d="M10 245L170 90l110 245 145-210 145 280 120-230 200 105" /></svg>
+        </div>
 
         <div className="themes" aria-label="Visual theme">
           <button className={theme === "volt" ? "active" : ""} onClick={() => setTheme("volt")} aria-label="Million-Volt theme">⚡</button>
@@ -148,11 +220,17 @@ export default function ExperienceFrame() {
 
         {intro !== "entered" && <section className={`intro intro-${intro}`}>
           {intro === "loading" ? <>
-            <div className="loader-mark"><div className="helmet">︵<span>⌁⌁</span></div><div className="load-number">{progress}%</div></div>
-            <svg className="lightning" viewBox="0 0 900 500" aria-hidden="true"><path d="M20 50 L180 250 L360 105 L430 330 L590 190 L670 390 L875 265" pathLength="100" style={{ strokeDashoffset: 100 - progress }} /></svg>
-          </> : <div className="sound-gate">
+            <div className="opening-scroll-text loading-text" aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <span key={index}>FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY</span>)}</div>
+            <div className="opening-logo loading-logo" style={{ backgroundPosition: `${(Math.floor(progress / 20) % 4) * 100 / 3}% ${Math.floor((Math.floor(progress / 20) % 8) / 4) * 100}%` }} />
+            <div className="lightning-field sparse" aria-hidden="true">{Array.from({ length: 8 }, (_, index) => <Image key={index} src={`${basePath}/assets/opening/lightning.png`} alt="" width={512} height={256} unoptimized style={{ "--i": index } as React.CSSProperties} />)}</div>
+            <div className="loading-ui"><span>{progress}%</span><i><b style={{ transform: `scaleX(${progress / 100})` }} /></i></div>
+          </> : intro === "sound" ? <div className="sound-gate">
             <h2>FOR THE BEST EXPERIENCE.<br />PLEASE TURN ON SOUND.</h2>
-            <div><button onClick={() => setIntro("entered")}><b>▥</b><span>ON</span></button><button onClick={() => setIntro("entered")}><b>▧</b><span>OFF</span></button></div>
+            <div><button onClick={() => enterWithSound(true)}><b>▥</b><span>ON</span></button><button onClick={() => enterWithSound(false)}><b>▧</b><span>OFF</span></button></div>
+          </div> : <div className="opening-sequence">
+            <div className="opening-scroll-text" aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <span key={index}>FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY</span>)}</div>
+            <div className="opening-logo" style={{ backgroundPosition: `${(openingFrame % 4) * 100 / 3}% ${Math.floor(openingFrame / 4) * 100}%` }} />
+            <div className="lightning-field" aria-hidden="true">{Array.from({ length: 36 }, (_, index) => <Image key={index} src={`${basePath}/assets/opening/lightning.png`} alt="" width={512} height={256} unoptimized style={{ "--i": index } as React.CSSProperties} />)}</div>
           </div>}
         </section>}
       </div>
@@ -162,17 +240,25 @@ export default function ExperienceFrame() {
         .viewport[data-theme="victory"]{--accent:#d9ff22;--accent2:#ff481b}.viewport[data-theme="fun"]{--accent:#8d5cff;--accent2:#39e6ff}
         .stage{position:relative;width:1440px;height:1000px;padding:8px;overflow:hidden;background:#1c1d1e}.rail,.workspace,.themes,.bottom-bar,.ambient{opacity:0;transform:scale(1.015);transition:opacity .8s ease,transform 1.1s cubic-bezier(.25,1,.5,1)}.stage.is-entered .rail,.stage.is-entered .workspace,.stage.is-entered .themes,.stage.is-entered .bottom-bar,.stage.is-entered .ambient{opacity:1;transform:none}
         .ambient{position:absolute;inset:8px;overflow:hidden;opacity:.025;pointer-events:none;transform:rotate(-13deg) scale(1.4);display:flex;flex-direction:column;justify-content:center}.ambient span{font-weight:1000;font-size:190px;line-height:.8;white-space:nowrap;color:var(--accent);animation:marquee 14s linear infinite}.ambient span:nth-child(even){transform:translateX(-420px);animation-direction:reverse}
-        .edge{position:absolute;z-index:8;pointer-events:none;background:var(--accent);filter:url(#none);opacity:.9}.edge-t,.edge-b{left:0;width:100%;height:2px}.edge-t{top:0}.edge-b{bottom:0}.edge-l,.edge-r{top:0;height:100%;width:2px}.edge-l{left:0}.edge-r{right:0}
+        .edge{position:absolute;z-index:8;pointer-events:none;opacity:1;background-color:transparent}.edge-t,.edge-b{left:0;width:100%;height:10px;background-image:url("${basePath}/assets/noise-border/fun-h.png");background-repeat:repeat-x;background-size:128px 320px;background-position:0 -85px}.edge-t{top:0;transform:translateY(-50%)}.edge-b{bottom:0;transform:translateY(50%)}.edge-l,.edge-r{top:0;height:100%;width:10px;background-image:url("${basePath}/assets/noise-border/fun-v.png");background-repeat:repeat-y;background-size:320px 128px;background-position:-85px 0}.edge-l{left:0;transform:translateX(-50%)}.edge-r{right:0;transform:translateX(50%)}
         .rail{position:absolute;left:8px;top:8px;width:200px;height:928px;background:#191a1b;overflow:hidden}.rail-scroll{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;padding:8px 9px 20px 16px;scrollbar-width:none}.rail-scroll::-webkit-scrollbar{display:none}.rail a{display:block;scroll-snap-align:center;height:134px;padding:7px 0;color:#7c7770;text-decoration:none;opacity:.58;transition:opacity .3s,color .3s,transform .3s}.rail a:hover,.rail a.current{opacity:1;color:#f5f3ee;transform:translateX(2px)}.rail img{display:block;width:172px;height:96px;object-fit:cover;border:1px solid #3b3834}.rail a.current img{border-color:var(--accent)}.rail span{display:block;margin-top:6px;font-size:11px;font-weight:700}.rail b{color:var(--accent)}
-        .workspace{position:absolute;left:208px;top:8px;width:1209px;height:928px;overflow:hidden;background:#1c1d1e}.workspace:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-135deg,rgba(255,255,255,.025) 0 1px,transparent 1px 5px);pointer-events:none}.work-head{position:absolute;z-index:4;left:20px;top:125px}.work-head span{display:inline-block;position:relative;z-index:2;padding:6px 22px;border:1px solid var(--accent);border-radius:20px;background:#1c1d1e;color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em}.work-head h1{position:relative;z-index:2;color:#fff;margin:26px 0 0;font-size:54px;line-height:1;font-weight:900;letter-spacing:-.03em}.work-head:after{content:"";position:absolute;left:-25px;top:-16px;width:400px;height:150px;border-top:14px solid var(--accent);border-left:130px solid transparent;transform:skewX(-28deg);z-index:1;opacity:.95}
-        .cards{position:absolute;left:23px;right:23px;top:290px;bottom:110px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;transition:transform .7s cubic-bezier(.25,1,.5,1)}.detail-card{position:relative;min-width:0;opacity:.76;transform:translateY(0);transition:opacity .55s,transform .55s}.detail-card.active{opacity:1;transform:translateY(-12px)}.detail-card:nth-child(2){margin-top:-58px}.detail-card:nth-child(3){margin-top:-155px}.art{position:relative;height:365px;border:1px solid var(--accent);overflow:hidden;background:#202122}.detail-card:nth-child(3) .art{height:365px}.detail-copy{padding:14px 8px}.detail-copy small{font-size:12px;font-weight:900;letter-spacing:.05em}.detail-copy h2{font-size:28px;line-height:1.05;margin:6px 0 20px}.detail-copy p{font-size:13px;line-height:2;margin:0;color:#f2eee8}.art-play:before,.art-play:after{content:"";position:absolute;border-radius:50%;background:#2b2c2d}.art-play:before{width:235px;height:235px;left:0;top:15px}.art-play:after{width:180px;height:180px;right:-25px;bottom:-20px}.flame{position:absolute;z-index:2;left:96px;top:40px;width:110px;height:145px;border-radius:52% 48% 60% 40%;background:var(--accent);color:var(--accent);clip-path:polygon(45% 0,62% 37%,100% 20%,83% 72%,50% 100%,15% 75%,0 42%,28% 52%)}.shoe,.fire{position:absolute;z-index:3;color:var(--accent);font-weight:900;letter-spacing:.06em}.shoe{right:26px;bottom:72px}.fire{left:80px;top:18px}.art-star span:not(.spark){position:absolute;width:175px;height:175px;border:1px solid color-mix(in srgb,var(--accent),transparent 45%);border-radius:50%}.art-star span:nth-child(1){left:30px;top:38px}.art-star span:nth-child(2){right:30px;top:38px}.art-star span:nth-child(3){left:30px;bottom:35px}.art-star span:nth-child(4){right:30px;bottom:35px}.spark{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);font-size:115px;color:var(--accent);line-height:1}.art-evolve{background:#202122;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:28px}.art-evolve b{background:var(--accent);border-radius:60% 40% 55% 45%;transform:rotate(23deg)}.art-evolve b:nth-child(2){transform:rotate(-35deg)}.art-evolve b:nth-child(3){transform:rotate(66deg)}.art-evolve i{position:absolute;inset:44% auto auto 44%;font-size:54px;color:#202122}
-        .scribble{position:absolute;z-index:5;width:22px;height:290px;background:var(--accent);clip-path:polygon(10% 0,100% 12%,25% 35%,90% 52%,10% 73%,78% 100%,0 92%,40% 65%,0 48%,50% 27%)}.scribble-a{left:405px;top:195px}.scribble-b{right:2px;top:310px;transform:rotate(12deg)}.scroll-meter{position:absolute;z-index:6;right:26px;bottom:22px;display:flex;gap:8px}.scroll-meter button{width:28px;height:4px;padding:0;border:0;background:#5e5954;cursor:pointer}.scroll-meter button.active{background:var(--accent)}
+        .workspace{--content-offset:calc((100cqh - 56.25cqw)/2);position:absolute;left:208px;top:8px;width:1209px;height:928px;container-type:size;overflow:hidden;background:#1c1d1e}.workspace:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-135deg,rgba(255,255,255,.025) 0 1px,transparent 1px 5px);pointer-events:none}.title-loop{display:none}.content-fx{position:absolute;z-index:1;left:0;top:var(--content-offset);width:100%;height:56.25cqw;overflow:hidden;pointer-events:none}.manga-frame{position:absolute;inset:0;background-image:url("${basePath}/assets/webgl/manga-d-sprite-key.png");background-repeat:no-repeat;background-size:400% 100%;background-position:0 0;animation:manga-idle 1s steps(4,end) infinite}.main-lightning{position:absolute;z-index:6;left:0;top:var(--content-offset);width:100%;height:56.25cqw;overflow:visible;pointer-events:none}.bolt{animation:main-lightning-jitter .18s steps(2,end) infinite alternate}.bolt-b{animation-delay:-.09s}.bolt-shadow,.bolt-core{fill:none;stroke-linecap:round;stroke-linejoin:round}.bolt-shadow{stroke:#020303;stroke-width:25}.bolt-core{stroke:var(--accent);stroke-width:8;filter:drop-shadow(0 0 2px #020303)}.section-label{position:absolute;z-index:3;left:1cqw;top:calc(var(--content-offset) + 1.45cqw);display:inline-block;width:17cqw;padding:6px 14px;border:1px solid var(--accent);border-radius:20px;background:#1c1d1e;color:#fff;font:800 1.05cqw/1 "elevon",sans-serif;letter-spacing:.06em}.work-head{position:absolute;z-index:3;left:2cqw;top:calc(var(--content-offset) + 6cqw)}.work-head h1{color:#fff;margin:0;font-size:5cqw;line-height:1.15;font-weight:900;letter-spacing:-.03em}.work-head:after{display:none}
+        .cards{position:absolute;inset:0;z-index:2}.detail-card{position:absolute;width:30cqw;display:flex;flex-direction:column;gap:1cqw;opacity:0;transform:translateY(16px);animation:logo-detail-in .6s cubic-bezier(.645,.045,.355,1) forwards}.card-1{left:2cqw;top:calc(var(--content-offset) + 14cqw);animation-delay:0s}.card-2{left:0;right:0;top:calc(var(--content-offset) + 9cqw);margin:auto;animation-delay:.05s}.card-3{right:2cqw;top:calc(var(--content-offset) + 2cqw);animation-delay:.1s}.art{position:relative;width:100%;aspect-ratio:1;background:#1c1d1e;overflow:hidden}.art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.detail-title{position:absolute;z-index:1;left:.9cqw;bottom:1cqw;display:flex;flex-direction:column;align-items:flex-start;gap:.45cqw}.detail-title small{font:400 1cqw/1 "elevon",sans-serif;letter-spacing:0}.detail-title h2{font-size:2.45cqw;line-height:1;margin:0;font-weight:700;letter-spacing:0}.detail-card>p{font-size:1.1cqw;font-weight:500;line-height:2;margin:0;white-space:normal}.sticker-gif{position:absolute;z-index:4;top:calc(var(--content-offset) + .865cqw);left:52.676cqw;width:19.175cqw;height:19.175cqw;object-fit:contain;pointer-events:none}
+        .route-transition{position:absolute;z-index:60;inset:8px;background:#080909;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .18s}.route-transition.next,.route-transition.prev{opacity:1;animation:route-flash .8s ease both}.route-transition span{font:800 22px/1 "elevon",sans-serif;letter-spacing:.08em}.route-transition svg{position:absolute;width:80%;overflow:visible}.route-transition path{fill:none;stroke:var(--accent);stroke-width:16;filter:drop-shadow(0 0 9px var(--accent));stroke-dasharray:1200;stroke-dashoffset:1200;animation:route-bolt .75s ease-out forwards}
         .themes{position:absolute;z-index:7;right:20px;top:16px;display:flex;background:var(--accent)}.themes button{width:38px;height:40px;border:0;background:transparent;filter:grayscale(1);cursor:pointer}.themes button.active{filter:none;box-shadow:inset 0 0 0 2px #1c1d1e}
         .bottom-bar{position:absolute;left:8px;bottom:8px;width:1409px;height:56px;background:#171819;display:flex;align-items:center;justify-content:space-between}.bottom-bar a{color:#bbb5ae;text-decoration:none}.previous,.next{display:flex;align-items:center;height:100%;gap:14px;padding:0 12px;font-size:16px;letter-spacing:.06em}.previous b,.next b{display:grid;place-items:center;width:40px;height:40px;background:var(--accent);color:#1c1d1e;font-size:22px}.previous em,.next em{color:var(--accent);font-style:normal}.bar-actions{display:flex;align-items:center;gap:10px;height:100%}.bar-actions>a,.bar-actions>button{height:42px;min-width:42px;padding:0 14px;border:0;background:#303132;color:#aaa;display:grid;place-items:center;cursor:pointer}.bar-actions .menu-button{width:160px;background:var(--accent);color:#1c1d1e;font-weight:800;display:flex;justify-content:center;gap:18px}.bar-actions .selected{box-shadow:inset 0 0 0 2px #3c3d3e;color:#fff}
         .menu{position:absolute;z-index:20;inset:8px;width:1409px;height:984px;background:#1c1d1e;padding:30px 18px 70px;opacity:0;visibility:hidden;transform:translateY(24px);transition:opacity .35s,transform .55s cubic-bezier(.25,1,.5,1),visibility 0s .55s}.menu.open{opacity:1;visibility:visible;transform:none;transition-delay:0s}.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 12px}.menu-grid a{height:238px;background:#303132;padding:8px;color:#eee;text-decoration:none;transition:transform .25s,background .25s}.menu-grid a:hover{transform:translateY(-4px);background:#3a3b3c}.menu-grid a.current{opacity:.35}.menu-grid img{width:100%;height:180px;object-fit:cover}.menu-grid span{display:block;padding:11px 0 0;font-size:16px}.menu-grid b{color:var(--accent)}.menu-foot{position:absolute;left:12px;right:12px;bottom:8px;height:46px;display:flex;align-items:center;gap:7px}.menu-foot a,.menu-foot button{height:42px;padding:0 14px;background:#3a3b3c;color:#fff;border:0;text-decoration:none;display:grid;place-items:center}.menu-foot button{margin-left:auto;width:160px;background:var(--accent);color:#1c1d1e}.menu-foot span{margin-left:auto}
-        .intro{position:absolute;z-index:100;inset:0;background:#020303;display:grid;place-items:center;color:#f5f3ee}.loader-mark{position:relative;width:300px;height:320px}.helmet{position:absolute;inset:0;border-radius:50%;border:16px solid #161717;display:grid;place-items:center;font-size:140px;color:#252627;box-shadow:inset 0 0 40px #000}.helmet span{position:absolute;font-size:55px;color:#b6d127}.load-number{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:36px;font-weight:1000}.lightning{position:absolute;width:920px;overflow:visible}.lightning path{fill:none;stroke:#fff;stroke-width:12;stroke-linecap:square;filter:drop-shadow(0 0 8px var(--accent)) drop-shadow(0 0 18px var(--accent));stroke-dasharray:100;transition:stroke-dashoffset .08s linear}.sound-gate{text-align:center}.sound-gate h2{font-size:25px;line-height:1.15;letter-spacing:.02em;margin-bottom:44px}.sound-gate>div{display:flex;gap:35px}.sound-gate button{width:180px;height:180px;border-radius:50%;border:1px solid var(--accent);background:transparent;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;cursor:pointer;transition:background .3s,color .3s,transform .3s}.sound-gate button:first-child,.sound-gate button:hover{background:var(--accent);color:#171819;transform:scale(1.04)}.sound-gate b{font-size:30px}.sound-gate span{font-size:13px;letter-spacing:.2em;font-weight:800}
+        .intro{position:fixed;z-index:100;inset:0;width:100vw;height:100dvh;background:#020303;display:grid;place-items:center;color:#f5f3ee;overflow:hidden}.opening-sequence{position:absolute;inset:0;isolation:isolate;overflow:hidden}.opening-scroll-text{position:absolute;inset:-25%;display:flex;flex-direction:column;justify-content:center;transform:rotate(-15deg);font:900 clamp(96px,22vw,340px)/.82 "elevon",sans-serif;color:#fff;opacity:.1;white-space:nowrap}.opening-scroll-text span{animation:opening-scroll .9s linear infinite}.opening-scroll-text span:nth-child(even){transform:translateX(-45%);animation-direction:reverse}.loading-text span{animation-duration:5.5s}.opening-logo{position:absolute;z-index:2;left:50%;top:50%;width:40vmin;height:40vmin;transform:translate(-50%,-50%);background-image:url("${basePath}/assets/opening/old-logos-atlas.webp");background-repeat:no-repeat;background-size:400% 200%;opacity:.8;filter:drop-shadow(0 0 18px rgba(255,72,27,.18));transition:transform .6s cubic-bezier(.25,1,.5,1),opacity .6s}.loading-logo{width:40vmin;height:40vmin}.lightning-field{position:absolute;z-index:3;inset:0;mix-blend-mode:hard-light;pointer-events:none}.lightning-field img{position:absolute;left:50%;top:50%;width:clamp(190px,34vw,620px);height:auto;opacity:0;transform-origin:0 50%;filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 16px var(--accent));animation:lightning-burst .72s steps(4,end) infinite;animation-delay:calc(var(--i) * -.037s);transform:rotate(calc(var(--i) * 47deg)) translateX(calc(4vmin + var(--i) * .45vmin)) scale(calc(.32 + var(--i) * .012))}.lightning-field.sparse img{animation-duration:2.1s;animation-delay:calc(var(--i) * -.21s);width:clamp(150px,25vw,420px)}.loading-ui{position:absolute;z-index:8;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:24px}.loading-ui>span{font:400 32px/1 "elevon",sans-serif;text-shadow:0 0 8px #000}.loading-ui>i{display:block;width:min(240px,50vw);height:3px;border-radius:99px;overflow:hidden;background:rgba(255,255,255,.4)}.loading-ui b{display:block;width:100%;height:100%;transform-origin:left;background:var(--accent);transition:transform .025s linear}.sound-gate{text-align:center}.sound-gate h2{font:800 25px/1.15 "elevon",sans-serif;letter-spacing:.02em;margin-bottom:44px}.sound-gate>div{display:flex;gap:40px}.sound-gate button{width:180px;height:180px;border-radius:50%;border:1px solid var(--accent);background:transparent;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;cursor:pointer;transition:background .3s,color .3s,transform .3s}.sound-gate button:first-child,.sound-gate button:hover{background:var(--accent);color:#171819;transform:scale(1.04)}.sound-gate b{font-size:30px}.sound-gate span{font:800 13px/1 "elevon",sans-serif;letter-spacing:.2em}
         @keyframes marquee{to{transform:translateX(-25%)}}
-        @media(max-width:800px){.stage{transform-origin:left top}.menu-grid{grid-template-columns:repeat(4,335px)}}
+        @keyframes title-row{to{transform:translateX(-35%)}}
+        @keyframes manga-idle{to{background-position:100% 0}}
+        @keyframes main-lightning-jitter{from{transform:translate(-2px,1px) scaleY(.99)}to{transform:translate(2px,-1px) scaleY(1.01)}}
+        @keyframes opening-scroll{to{transform:translateX(-18%)}}
+        @keyframes lightning-burst{0%,72%{opacity:0}76%{opacity:.18}82%{opacity:1}92%{opacity:.65}100%{opacity:0}}
+        @keyframes logo-detail-in{to{opacity:1;transform:translateY(0)}}
+        @keyframes route-flash{0%{opacity:0}15%,72%{opacity:1}100%{opacity:0}}
+        @keyframes route-bolt{0%{stroke-dashoffset:1200}70%,100%{stroke-dashoffset:0}}
+        @media(max-width:800px){.stage{transform-origin:left top}.menu-grid{grid-template-columns:repeat(4,335px)}.opening-logo,.loading-logo{width:58vmin;height:58vmin}.sound-gate h2{font-size:17px;margin-bottom:34px}.sound-gate>div{gap:22px}.sound-gate button{width:136px;height:136px;gap:16px}.sound-gate b{font-size:24px}}
       `}</style>
     </main>
   );

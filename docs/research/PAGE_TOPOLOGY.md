@@ -8,4 +8,4 @@ The target is a single viewport experience with `body` fixed to the viewport and
 4. Three theme buttons in the top-right.
 5. A full-canvas menu overlay opened by the bottom Menu control.
 
-Interaction model: primarily click-driven. The thumbnail rail uses vertical scroll snap; page-to-page controls are links; theme controls change coloration; the menu opens as an overlay. Decorative title rows and canvas marks are time-driven.
+Interaction model: the opening and manga layers are time-driven; wheel gestures trigger route navigation through a recovered threshold/cooldown algorithm; the thumbnail rail uses vertical scroll snap; page-to-page controls are links; theme controls change coloration; the menu is click-driven.

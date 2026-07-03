@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/pfl7wcw.css" />
+      </head>
       <body>{children}</body>
     </html>
   );
