@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[87739,["/funtech-logo-details-clone/_next/static/chunks/1d4h-sglyo8ft.js","/funtech-logo-details-clone/_next/static/chunks/14mumt5_n0xhi.js","/funtech-logo-details-clone/_next/static/chunks/3058jmmd3vxm2.js"],"default"]
+3:I[97367,["/funtech-logo-details-clone/_next/static/chunks/1d4h-sglyo8ft.js","/funtech-logo-details-clone/_next/static/chunks/14mumt5_n0xhi.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"initialSlug":"ci-update"}],[["$","script","script-0",{"src":"/funtech-logo-details-clone/_next/static/chunks/3058jmmd3vxm2.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"v2mqWf9Vl07-JCXp4Xbmn"}
+5:null

@@ -1,0 +1,787 @@
+[
+  {
+    "assetPath": "/10th-special-item/items-bg.jpg",
+    "outputPath": "public/assets/full-site/10th-special-item/items-bg.jpg",
+    "url": "https://ci.funtech.inc/10th-special-item/items-bg.jpg"
+  },
+  {
+    "assetPath": "/10th-special-item/items/banana.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/banana.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/banana.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/bottle.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/bottle.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/bottle.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/cups.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/cups.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/cups.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/ennichi.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/ennichi.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/ennichi.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/fan.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/fan.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/fan.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/logo-black.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/logo-black.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/logo-black.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/logo-orange.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/logo-orange.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/logo-orange.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/logo-sticker.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/logo-sticker.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/logo-sticker.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/logo-white.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/logo-white.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/logo-white.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/opener.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/opener.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/opener.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/plate.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/plate.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/plate.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/tag.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/tag.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/tag.png"
+  },
+  {
+    "assetPath": "/10th-special-item/items/towel.png",
+    "outputPath": "public/assets/full-site/10th-special-item/items/towel.png",
+    "url": "https://ci.funtech.inc/10th-special-item/items/towel.png"
+  },
+  {
+    "assetPath": "/_next/static/media/Furuhashi-2.b2ebe002.jpg",
+    "outputPath": "public/assets/full-site/media/Furuhashi-2.b2ebe002.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Furuhashi-2.b2ebe002.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Furuhashi.7b7e20e1.jpg",
+    "outputPath": "public/assets/full-site/media/Furuhashi.7b7e20e1.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Furuhashi.7b7e20e1.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Hashimoto-2.ff7c0359.jpg",
+    "outputPath": "public/assets/full-site/media/Hashimoto-2.ff7c0359.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Hashimoto-2.ff7c0359.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Hashimoto.99451fdd.jpg",
+    "outputPath": "public/assets/full-site/media/Hashimoto.99451fdd.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Hashimoto.99451fdd.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Horino-2.ecc72490.jpg",
+    "outputPath": "public/assets/full-site/media/Horino-2.ecc72490.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Horino-2.ecc72490.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Horino.fe18a03a.jpg",
+    "outputPath": "public/assets/full-site/media/Horino.fe18a03a.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Horino.fe18a03a.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Jokura-2.66babb9f.jpg",
+    "outputPath": "public/assets/full-site/media/Jokura-2.66babb9f.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Jokura-2.66babb9f.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Jokura.e58d32d3.jpg",
+    "outputPath": "public/assets/full-site/media/Jokura.e58d32d3.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Jokura.e58d32d3.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kariya-2.f967c9de.jpg",
+    "outputPath": "public/assets/full-site/media/Kariya-2.f967c9de.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kariya-2.f967c9de.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kariya.5bea7e72.jpg",
+    "outputPath": "public/assets/full-site/media/Kariya.5bea7e72.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kariya.5bea7e72.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kondo-2.3670ab6d.jpg",
+    "outputPath": "public/assets/full-site/media/Kondo-2.3670ab6d.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kondo-2.3670ab6d.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kondo.6f015d85.jpg",
+    "outputPath": "public/assets/full-site/media/Kondo.6f015d85.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kondo.6f015d85.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kumei-2.bd5161b7.jpg",
+    "outputPath": "public/assets/full-site/media/Kumei-2.bd5161b7.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kumei-2.bd5161b7.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Kumei.fa333a5a.jpg",
+    "outputPath": "public/assets/full-site/media/Kumei.fa333a5a.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Kumei.fa333a5a.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Matsumoto-2.dc3f3407.jpg",
+    "outputPath": "public/assets/full-site/media/Matsumoto-2.dc3f3407.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Matsumoto-2.dc3f3407.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Matsumoto.c4ac432c.jpg",
+    "outputPath": "public/assets/full-site/media/Matsumoto.c4ac432c.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Matsumoto.c4ac432c.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Moriya-2.20048f17.jpg",
+    "outputPath": "public/assets/full-site/media/Moriya-2.20048f17.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Moriya-2.20048f17.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Moriya.854cb686.jpg",
+    "outputPath": "public/assets/full-site/media/Moriya.854cb686.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Moriya.854cb686.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Nakamura-2.6d707de2.jpg",
+    "outputPath": "public/assets/full-site/media/Nakamura-2.6d707de2.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Nakamura-2.6d707de2.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Nakamura.d9f853a8.jpg",
+    "outputPath": "public/assets/full-site/media/Nakamura.d9f853a8.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Nakamura.d9f853a8.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Ohta-2.0c9ebe35.jpg",
+    "outputPath": "public/assets/full-site/media/Ohta-2.0c9ebe35.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Ohta-2.0c9ebe35.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Ohta.23cae958.jpg",
+    "outputPath": "public/assets/full-site/media/Ohta.23cae958.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Ohta.23cae958.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Tanaka-2.fd9e97da.jpg",
+    "outputPath": "public/assets/full-site/media/Tanaka-2.fd9e97da.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Tanaka-2.fd9e97da.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Tanaka.7ce13911.jpg",
+    "outputPath": "public/assets/full-site/media/Tanaka.7ce13911.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Tanaka.7ce13911.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Terence-2.557c76bc.jpg",
+    "outputPath": "public/assets/full-site/media/Terence-2.557c76bc.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Terence-2.557c76bc.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Terence.2f2b00ba.jpg",
+    "outputPath": "public/assets/full-site/media/Terence.2f2b00ba.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Terence.2f2b00ba.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Ueda-2.e4f34a20.jpg",
+    "outputPath": "public/assets/full-site/media/Ueda-2.e4f34a20.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Ueda-2.e4f34a20.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Ueda.7e76068b.jpg",
+    "outputPath": "public/assets/full-site/media/Ueda.7e76068b.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Ueda.7e76068b.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Wakame-2.f7742689.jpg",
+    "outputPath": "public/assets/full-site/media/Wakame-2.f7742689.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Wakame-2.f7742689.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/Wakame.b606eba6.jpg",
+    "outputPath": "public/assets/full-site/media/Wakame.b606eba6.jpg",
+    "url": "https://ci.funtech.inc/_next/static/media/Wakame.b606eba6.jpg"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-00.936727a8.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-00.936727a8.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-00.936727a8.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-01.50eb6e2c.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-01.50eb6e2c.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-01.50eb6e2c.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-02.d74de60b.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-02.d74de60b.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-02.d74de60b.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-03.b0f3f183.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-03.b0f3f183.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-03.b0f3f183.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-04.11488a35.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-04.11488a35.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-04.11488a35.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-05.84f2bdbb.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-05.84f2bdbb.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-05.84f2bdbb.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-06.70875a00.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-06.70875a00.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-06.70875a00.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-07.bc324c42.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-07.bc324c42.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-07.bc324c42.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-08.c4c0cff9.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-08.c4c0cff9.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-08.c4c0cff9.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-09.6df7b486.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-09.6df7b486.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-09.6df7b486.png"
+  },
+  {
+    "assetPath": "/_next/static/media/logo-pattern-10.df2711e7.png",
+    "outputPath": "public/assets/full-site/media/logo-pattern-10.df2711e7.png",
+    "url": "https://ci.funtech.inc/_next/static/media/logo-pattern-10.df2711e7.png"
+  },
+  {
+    "assetPath": "/favicon.png",
+    "outputPath": "public/assets/full-site/favicon.png",
+    "url": "https://ci.funtech.inc/favicon.png"
+  },
+  {
+    "assetPath": "/fin/brand.jpg",
+    "outputPath": "public/assets/full-site/fin/brand.jpg",
+    "url": "https://ci.funtech.inc/fin/brand.jpg"
+  },
+  {
+    "assetPath": "/fin/corporate.jpg",
+    "outputPath": "public/assets/full-site/fin/corporate.jpg",
+    "url": "https://ci.funtech.inc/fin/corporate.jpg"
+  },
+  {
+    "assetPath": "/fin/recruit.jpg",
+    "outputPath": "public/assets/full-site/fin/recruit.jpg",
+    "url": "https://ci.funtech.inc/fin/recruit.jpg"
+  },
+  {
+    "assetPath": "/logo-variation/2D.png",
+    "outputPath": "public/assets/full-site/logo-variation/2D.png",
+    "url": "https://ci.funtech.inc/logo-variation/2D.png"
+  },
+  {
+    "assetPath": "/logo-variation/3D.png",
+    "outputPath": "public/assets/full-site/logo-variation/3D.png",
+    "url": "https://ci.funtech.inc/logo-variation/3D.png"
+  },
+  {
+    "assetPath": "/logo-variation/MATERIAL.png",
+    "outputPath": "public/assets/full-site/logo-variation/MATERIAL.png",
+    "url": "https://ci.funtech.inc/logo-variation/MATERIAL.png"
+  },
+  {
+    "assetPath": "/logo-variation/TOON.png",
+    "outputPath": "public/assets/full-site/logo-variation/TOON.png",
+    "url": "https://ci.funtech.inc/logo-variation/TOON.png"
+  },
+  {
+    "assetPath": "/logo-variation/balloon.png",
+    "outputPath": "public/assets/full-site/logo-variation/balloon.png",
+    "url": "https://ci.funtech.inc/logo-variation/balloon.png"
+  },
+  {
+    "assetPath": "/logo-variation/breaker-bg.png",
+    "outputPath": "public/assets/full-site/logo-variation/breaker-bg.png",
+    "url": "https://ci.funtech.inc/logo-variation/breaker-bg.png"
+  },
+  {
+    "assetPath": "/logo-variation/dot.png",
+    "outputPath": "public/assets/full-site/logo-variation/dot.png",
+    "url": "https://ci.funtech.inc/logo-variation/dot.png"
+  },
+  {
+    "assetPath": "/logo-variation/fun-bg.png",
+    "outputPath": "public/assets/full-site/logo-variation/fun-bg.png",
+    "url": "https://ci.funtech.inc/logo-variation/fun-bg.png"
+  },
+  {
+    "assetPath": "/logo-variation/fun.png",
+    "outputPath": "public/assets/full-site/logo-variation/fun.png",
+    "url": "https://ci.funtech.inc/logo-variation/fun.png"
+  },
+  {
+    "assetPath": "/logo-variation/volt-bg.png",
+    "outputPath": "public/assets/full-site/logo-variation/volt-bg.png",
+    "url": "https://ci.funtech.inc/logo-variation/volt-bg.png"
+  },
+  {
+    "assetPath": "/noise-border/breaker-h.png",
+    "outputPath": "public/assets/full-site/noise-border/breaker-h.png",
+    "url": "https://ci.funtech.inc/noise-border/breaker-h.png"
+  },
+  {
+    "assetPath": "/noise-border/breaker-v.png",
+    "outputPath": "public/assets/full-site/noise-border/breaker-v.png",
+    "url": "https://ci.funtech.inc/noise-border/breaker-v.png"
+  },
+  {
+    "assetPath": "/noise-border/fun-h.png",
+    "outputPath": "public/assets/full-site/noise-border/fun-h.png",
+    "url": "https://ci.funtech.inc/noise-border/fun-h.png"
+  },
+  {
+    "assetPath": "/noise-border/fun-v.png",
+    "outputPath": "public/assets/full-site/noise-border/fun-v.png",
+    "url": "https://ci.funtech.inc/noise-border/fun-v.png"
+  },
+  {
+    "assetPath": "/noise-border/volt-h.png",
+    "outputPath": "public/assets/full-site/noise-border/volt-h.png",
+    "url": "https://ci.funtech.inc/noise-border/volt-h.png"
+  },
+  {
+    "assetPath": "/noise-border/volt-v.png",
+    "outputPath": "public/assets/full-site/noise-border/volt-v.png",
+    "url": "https://ci.funtech.inc/noise-border/volt-v.png"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-02-0.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-02-0.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-02-0.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-02-1.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-02-1.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-02-1.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-02-2.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-02-2.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-02-2.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-03-0.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-03-0.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-03-0.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-03-1.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-03-1.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-03-1.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-03-2.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-03-2.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-03-2.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-lightning-0.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-lightning-0.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-lightning-0.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-lightning-1.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-lightning-1.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-lightning-1.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/funtech-way-lightning-2.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/funtech-way-lightning-2.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/funtech-way-lightning-2.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/vision-visual-0.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/vision-visual-0.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/vision-visual-0.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/vision-visual-1.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/vision-visual-1.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/vision-visual-1.webp"
+  },
+  {
+    "assetPath": "/noise-illustrations/vision-visual-2.webp",
+    "outputPath": "public/assets/full-site/noise-illustrations/vision-visual-2.webp",
+    "url": "https://ci.funtech.inc/noise-illustrations/vision-visual-2.webp"
+  },
+  {
+    "assetPath": "/opening/logos/old-logos-atlas.webp",
+    "outputPath": "public/assets/full-site/opening/logos/old-logos-atlas.webp",
+    "url": "https://ci.funtech.inc/opening/logos/old-logos-atlas.webp"
+  },
+  {
+    "assetPath": "/sound/bgm.mp3",
+    "outputPath": "public/assets/full-site/sound/bgm.mp3",
+    "url": "https://ci.funtech.inc/sound/bgm.mp3"
+  },
+  {
+    "assetPath": "/sound/lightning.aac",
+    "outputPath": "public/assets/full-site/sound/lightning.aac",
+    "url": "https://ci.funtech.inc/sound/lightning.aac"
+  },
+  {
+    "assetPath": "/stickers/gif/baribari.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/baribari.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/baribari.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/dodon.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/dodon.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/dodon.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif1.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif1.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif1.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif11.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif11.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif11.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif14.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif14.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif14.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif16.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif16.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif16.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif4.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif4.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif4.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif6.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif6.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif6.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gif9.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gif9.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gif9.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/gogogo.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/gogogo.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/gogogo.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/guooo.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/guooo.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/guooo.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/waaa.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/waaa.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/waaa.gif"
+  },
+  {
+    "assetPath": "/stickers/gif/zyan.gif",
+    "outputPath": "public/assets/full-site/stickers/gif/zyan.gif",
+    "url": "https://ci.funtech.inc/stickers/gif/zyan.gif"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker0.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker0.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker0.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker1.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker1.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker1.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker10.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker10.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker10.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker11.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker11.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker11.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker12.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker12.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker12.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker13.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker13.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker13.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker14.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker14.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker14.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker15.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker15.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker15.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker16.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker16.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker16.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker17.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker17.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker17.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker18.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker18.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker18.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker19.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker19.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker19.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker2.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker2.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker2.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker3.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker3.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker3.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker4.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker4.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker4.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker5.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker5.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker5.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker6.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker6.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker6.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker7.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker7.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker7.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker8.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker8.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker8.webp"
+  },
+  {
+    "assetPath": "/stickers/webp/sticker9.webp",
+    "outputPath": "public/assets/full-site/stickers/webp/sticker9.webp",
+    "url": "https://ci.funtech.inc/stickers/webp/sticker9.webp"
+  },
+  {
+    "assetPath": "/thumbnails/10th-special-item.webp",
+    "outputPath": "public/assets/full-site/thumbnails/10th-special-item.webp",
+    "url": "https://ci.funtech.inc/thumbnails/10th-special-item.webp"
+  },
+  {
+    "assetPath": "/thumbnails/all-for-fun.webp",
+    "outputPath": "public/assets/full-site/thumbnails/all-for-fun.webp",
+    "url": "https://ci.funtech.inc/thumbnails/all-for-fun.webp"
+  },
+  {
+    "assetPath": "/thumbnails/brand-message.webp",
+    "outputPath": "public/assets/full-site/thumbnails/brand-message.webp",
+    "url": "https://ci.funtech.inc/thumbnails/brand-message.webp"
+  },
+  {
+    "assetPath": "/thumbnails/breakers-of-victory.webp",
+    "outputPath": "public/assets/full-site/thumbnails/breakers-of-victory.webp",
+    "url": "https://ci.funtech.inc/thumbnails/breakers-of-victory.webp"
+  },
+  {
+    "assetPath": "/thumbnails/ci-update.webp",
+    "outputPath": "public/assets/full-site/thumbnails/ci-update.webp",
+    "url": "https://ci.funtech.inc/thumbnails/ci-update.webp"
+  },
+  {
+    "assetPath": "/thumbnails/ending-message.webp",
+    "outputPath": "public/assets/full-site/thumbnails/ending-message.webp",
+    "url": "https://ci.funtech.inc/thumbnails/ending-message.webp"
+  },
+  {
+    "assetPath": "/thumbnails/fin.webp",
+    "outputPath": "public/assets/full-site/thumbnails/fin.webp",
+    "url": "https://ci.funtech.inc/thumbnails/fin.webp"
+  },
+  {
+    "assetPath": "/thumbnails/funtech-way.webp",
+    "outputPath": "public/assets/full-site/thumbnails/funtech-way.webp",
+    "url": "https://ci.funtech.inc/thumbnails/funtech-way.webp"
+  },
+  {
+    "assetPath": "/thumbnails/home.webp",
+    "outputPath": "public/assets/full-site/thumbnails/home.webp",
+    "url": "https://ci.funtech.inc/thumbnails/home.webp"
+  },
+  {
+    "assetPath": "/thumbnails/logo-details.webp",
+    "outputPath": "public/assets/full-site/thumbnails/logo-details.webp",
+    "url": "https://ci.funtech.inc/thumbnails/logo-details.webp"
+  },
+  {
+    "assetPath": "/thumbnails/logo-variation.webp",
+    "outputPath": "public/assets/full-site/thumbnails/logo-variation.webp",
+    "url": "https://ci.funtech.inc/thumbnails/logo-variation.webp"
+  },
+  {
+    "assetPath": "/thumbnails/megavolt-creative.webp",
+    "outputPath": "public/assets/full-site/thumbnails/megavolt-creative.webp",
+    "url": "https://ci.funtech.inc/thumbnails/megavolt-creative.webp"
+  },
+  {
+    "assetPath": "/thumbnails/vision-visual.webp",
+    "outputPath": "public/assets/full-site/thumbnails/vision-visual.webp",
+    "url": "https://ci.funtech.inc/thumbnails/vision-visual.webp"
+  },
+  {
+    "assetPath": "/thumbnails/we-are-funtech.webp",
+    "outputPath": "public/assets/full-site/thumbnails/we-are-funtech.webp",
+    "url": "https://ci.funtech.inc/thumbnails/we-are-funtech.webp"
+  },
+  {
+    "assetPath": "/vision-visual/vision-visual-breaker.png",
+    "outputPath": "public/assets/full-site/vision-visual/vision-visual-breaker.png",
+    "url": "https://ci.funtech.inc/vision-visual/vision-visual-breaker.png"
+  },
+  {
+    "assetPath": "/vision-visual/vision-visual-fun.png",
+    "outputPath": "public/assets/full-site/vision-visual/vision-visual-fun.png",
+    "url": "https://ci.funtech.inc/vision-visual/vision-visual-fun.png"
+  },
+  {
+    "assetPath": "/vision-visual/vision-visual-volt.png",
+    "outputPath": "public/assets/full-site/vision-visual/vision-visual-volt.png",
+    "url": "https://ci.funtech.inc/vision-visual/vision-visual-volt.png"
+  },
+  {
+    "assetPath": "/webgl/lightning.png",
+    "outputPath": "public/assets/full-site/webgl/lightning.png",
+    "url": "https://ci.funtech.inc/webgl/lightning.png"
+  },
+  {
+    "assetPath": "/webgl/lightning/tapered-01.obj",
+    "outputPath": "public/assets/full-site/webgl/lightning/tapered-01.obj",
+    "url": "https://ci.funtech.inc/webgl/lightning/tapered-01.obj"
+  },
+  {
+    "assetPath": "/webgl/lightning/tapered-02.obj",
+    "outputPath": "public/assets/full-site/webgl/lightning/tapered-02.obj",
+    "url": "https://ci.funtech.inc/webgl/lightning/tapered-02.obj"
+  },
+  {
+    "assetPath": "/webgl/logo/home-logo-letters.glb",
+    "outputPath": "public/assets/full-site/webgl/logo/home-logo-letters.glb",
+    "url": "https://ci.funtech.inc/webgl/logo/home-logo-letters.glb"
+  },
+  {
+    "assetPath": "/webgl/logo/home-logo-stickers-atlas.webp",
+    "outputPath": "public/assets/full-site/webgl/logo/home-logo-stickers-atlas.webp",
+    "url": "https://ci.funtech.inc/webgl/logo/home-logo-stickers-atlas.webp"
+  },
+  {
+    "assetPath": "/webgl/logo/home-logo-stickers.glb",
+    "outputPath": "public/assets/full-site/webgl/logo/home-logo-stickers.glb",
+    "url": "https://ci.funtech.inc/webgl/logo/home-logo-stickers.glb"
+  },
+  {
+    "assetPath": "/webgl/manga-a-sprite.jpg",
+    "outputPath": "public/assets/full-site/webgl/manga-a-sprite.jpg",
+    "url": "https://ci.funtech.inc/webgl/manga-a-sprite.jpg"
+  },
+  {
+    "assetPath": "/webgl/manga-b-sprite.jpg",
+    "outputPath": "public/assets/full-site/webgl/manga-b-sprite.jpg",
+    "url": "https://ci.funtech.inc/webgl/manga-b-sprite.jpg"
+  },
+  {
+    "assetPath": "/webgl/manga-c-sprite.jpg",
+    "outputPath": "public/assets/full-site/webgl/manga-c-sprite.jpg",
+    "url": "https://ci.funtech.inc/webgl/manga-c-sprite.jpg"
+  },
+  {
+    "assetPath": "/webgl/manga-d-sprite.jpg",
+    "outputPath": "public/assets/full-site/webgl/manga-d-sprite.jpg",
+    "url": "https://ci.funtech.inc/webgl/manga-d-sprite.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-ab.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-ab.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-ab.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-ac.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-ac.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-ac.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-ad.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-ad.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-ad.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-bc.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-bc.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-bc.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-bd.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-bd.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-bd.jpg"
+  },
+  {
+    "assetPath": "/webgl/transition-cd.jpg",
+    "outputPath": "public/assets/full-site/webgl/transition-cd.jpg",
+    "url": "https://ci.funtech.inc/webgl/transition-cd.jpg"
+  },
+  {
+    "assetPath": "/webgl/work-archive.webp",
+    "outputPath": "public/assets/full-site/webgl/work-archive.webp",
+    "url": "https://ci.funtech.inc/webgl/work-archive.webp"
+  }
+]
